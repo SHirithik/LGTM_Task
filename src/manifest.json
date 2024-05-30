@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Linkedin Profile Picture changing Extension",
+  "version": "1.0",
+  "description": "This Chrome extension will change the profile pictures on the LinkedIn by using JavaScript and .js"
+  ,
+  "permissions": [
+    "activeTab",
+    "declarativeContent"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "Linkedin.png",
+    "48": "Linkedin.png",
+    "128": "Linkedin.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "Linkedin.png",
+      "48": "Linkedin.png",
+      "128": "Linkedin.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "profilepic.jpeg",
+        "assets/client-cc99106f.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
